@@ -1,0 +1,65 @@
+##################################################################
+#                     CropCoins messages file                    #
+#                            By.: DaweY                          #
+##################################################################
+
+prefix: "&a&lCropCoins &a» "
+coin-get: "&7+&a{amount} &7CropCoin"
+limit-reached: "&7You have reached the CropCoin limit!"
+coin-not-get: "&7You did not receive any CropCoin!"
+help-header: "&7-------{ &a&lCropCoins Help &7}-------\n&r"
+help-footer: "&7\n--------------------------------------"
+help-give:
+  - "&a/cropcoins give <player> <amount>"
+  - "&7- Give CropCoin to a player"
+help-take:
+  - "&a/cropcoins take <player> <amount>"
+  - "&7- Take CropCoin from a player's balance"
+help-set:
+  - "&a/cropcoins set <player> <amount>"
+  - "&7- Set CropCoin balance for a player"
+help-reset:
+  - "&a/cropcoins reset <player>"
+  - "&7- Reset a player's CropCoin balance"
+help-reload:
+  - "&a/cropcoins reload"
+  - "&7- Reload the plugin"
+help-balance:
+  - "&a/cropcoins balance"
+  - "&7- Your CropCoin balance"
+help-balance-others:
+  - "&a/cropcoins balance <player>"
+  - "&7- Check a player's CropCoin balance"
+help-send:
+  - "&a/cropcoins send <player> <amount>"
+  - "&7- Send CropCoin to another player"
+help-top:
+  - "&a/cropcoins top"
+  - "&7- Top list"
+no-permission: "&cYou do not have permission for this command!"
+give-success: "&a{amount} &7CropCoin successfully given to &a{player}! New balance: &a{newbalance}"
+take-success: "&a{amount} &7CropCoin successfully taken from &a{player}! New balance: &a{newbalance}"
+set-success: "&a{amount} &7CropCoin successfully set for &a{player}!"
+reset-success: "&a{player}'s &7CropCoin balance successfully reset!"
+reload-success: "&aPlugin successfully reloaded!"
+send-success: "&a{amount} &7CropCoin successfully sent to &a{player}!"
+cropcoin-got: "&7You received &a{amount} &7CropCoin!"
+cropcoin-got-from: "&7You received &a{amount} &7CropCoin from &a{player}!"
+cropcoin-reseted: "&7Your CropCoin balance has been reset!"
+cropcoin-set: "&7Your CropCoin balance has been set to &a{amount} &7CropCoin!"
+cropcoin-taken: "&a{amount} &7CropCoin has been deducted from your balance! New balance: &a{newbalance}"
+cropcoin-given: "&a{amount} &7CropCoin has been added to your balance! New balance: &a{newbalance}"
+balance-other: "&a{player}'s &7CropCoin balance: &a{amount}"
+balance-self: "&7Your CropCoin balance: &a{amount}"
+top-header: "&7-------{ &a&lCropCoins Toplist {current}/{max} &7}-------\n&r"
+top-footer: "&7\n--------------------------------------"
+top-format: "&a{position}&7. &a{player} &7- &a{amount}"
+invalid-amount: "&7Invalid amount (&c{amount}&7)!"
+invalid-player: "&7No such player (&c{player}&7)!"
+invalid-arguments: "&7Invalid arguments or command does not exist!"
+player-offline: "&c{player} &7is not online!"
+not-enough-coins: "&7You don't have enough CropCoins! (&c{amount}&7)"
+limit-reached-other: "&c{player} &7has reached the CropCoin limit, so you cannot send them more!"
+limit-reached-self: "&7You have reached the CropCoin limit, so you cannot receive more CropCoins!"
+cant-send-to-self: "&7You cannot send CropCoins to yourself!"
+

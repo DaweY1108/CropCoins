@@ -1,0 +1,131 @@
+##################################################################
+#                      CropCoins config file                     #
+#                            By.: DaweY                          #
+##################################################################
+
+# - Database Config - #
+database:
+  # - Database type - #
+  # Available types: MySQL, SQLite
+  type: "SQLite"
+  # - MySQL Config - #
+  mysql:
+    host: "hostname"
+    port: "port"
+    database: "database"
+    username: "database"
+    password: "password"
+
+# - CropCoins Config General - #
+
+# When the player stop breaking crops, the plugin will wait this time to save the data (in seconds)
+value-database-write-wait: 5
+
+# The maximum value of the cropcoins per player
+#
+# !! IMPORTANT: The max value is: 9223372036854775807 !!
+#
+max-crop-coin-value: 10000000
+
+# Should the player only get cropcoins from ripe crops
+only-ripe-crops: true
+
+# Top command players per page
+top-amount: 10
+
+# Debug messages
+debug: false
+
+# - CropCoins Amount - #
+
+#####################################################################################
+#
+# The amount of cropcoins the player will get when breaking the crop
+#
+# The amounts are depend on chance, min and max values, and the specified world
+#
+# If the min for example is 10 and the max is 20
+# it calculates the middle value between min and max so in this case it will be 15
+# and if the chance is 100, the player will get a random amount of 15 and 20
+# if the chance is 0, the player will get a random amount of 10 and 15
+#
+#####################################################################################
+#
+# EXAMPLE:
+#
+# minecraft:
+#   [crop1]:
+#     [world name 1]:
+#       chance: 50
+#       min: 10
+#       max: 20
+#     [world name 2]:
+#       chance: 50
+#       min: 10
+#       max: 20
+#   [crop2]:
+#     [world name 1]:
+#       chance: 50
+#       min: 10
+#       max: 20
+#     [world name 2]:
+#       chance: 50
+#       min: 10
+#       max: 20
+#
+#####################################################################################
+
+minecraft:
+  carrots:
+    world:
+      chance: 50
+      min: 10
+      max: 20
+  potatoes:
+    world:
+      chance: 50
+      min: 10
+      max: 20
+  wheat:
+    world:
+      chance: 50
+      min: 10
+      max: 20
+  beetroots:
+    world:
+      chance: 50
+      min: 10
+      max: 20
+  nether_wart:
+    world:
+      chance: 50
+      min: 10
+      max: 20
+  cocoa:
+    world:
+      chance: 50
+      min: 10
+      max: 20
+  sugar_cane:
+    world:
+      chance: 50
+      min: 10
+      max: 20
+  pumpkin:
+    world:
+      chance: 50
+      min: 10
+      max: 20
+  melon:
+    world:
+      chance: 50
+      min: 10
+      max: 20
+  cactus:
+    world:
+      chance: 50
+      min: 10
+      max: 20
+
+
+

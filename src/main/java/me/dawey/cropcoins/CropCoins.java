@@ -1,5 +1,6 @@
 package me.dawey.cropcoins;
 
+import me.dawey.cropcoins.API.CropCoinsAPI;
 import me.dawey.cropcoins.Commands.*;
 import me.dawey.cropcoins.Database.CropCoinData;
 import me.dawey.cropcoins.Database.Database;
@@ -22,6 +23,7 @@ public final class CropCoins extends JavaPlugin {
 
     private Database db;
     private CropCoinData cropCoinData;
+    private CropCoinsAPI cropCoinsAPI;
     private CropBreakHandler cropBreakHandler;
     private Map<String, CropCoin> cropCoinValues;
     private Language language;

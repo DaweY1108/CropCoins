@@ -1,5 +1,6 @@
 package me.dawey.cropcoins.Utils;
 
+import me.dawey.cropcoins.API.Events.GetCropCoinEvent;
 import me.dawey.cropcoins.CropCoins;
 import org.bukkit.Bukkit;
 import org.bukkit.Sound;
@@ -57,6 +58,14 @@ public class CropBreakHandler {
                             plugin.sendActionBar(Bukkit.getPlayer(player), plugin.getLangFile().getString("coin-get")
                                     .replace("{amount}", String.valueOf(amount - (temp - plugin.getMaxCropCoins()))));
                             Logger.getLogger().debug(player + " has reached the CropCoin limit");
+                            cropBreaks.remove(player);
+                            cropBreaksAmount.remove(player);
+                            return;
+                        }
+
+                        GetCropCoinEvent event = new GetCropCoinEvent(Bukkit.getPlayer(player), amount);
+                        Bukkit.getPluginManager().callEvent(event);
+                        if (event.isCancelled()) {
                             cropBreaks.remove(player);
                             cropBreaksAmount.remove(player);
                             return;

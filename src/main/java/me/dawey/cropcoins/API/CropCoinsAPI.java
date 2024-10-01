@@ -7,35 +7,28 @@ import org.checkerframework.checker.units.qual.C;
 
 public class CropCoinsAPI {
 
-    private CropCoins plugin;
-
-    public CropCoinsAPI(CropCoins plugin) {
-        this.plugin = plugin;
-    }
-
-    public void addCoins(String playerName, long amount) throws InvalidCropCoinValueException {
+    public static void addCoins(String playerName, long amount) throws InvalidCropCoinValueException {
         if (amount < 0) {
             throw new InvalidCropCoinValueException("Amount cannot be negative", null);
         }
-        plugin.getCropCoinData().addCoins(playerName, amount);
+        CropCoins.getInstance().getCropCoinData().addCoins(playerName, amount);
     }
 
-    public void takeCoins(String playerName, long amount) throws InvalidCropCoinValueException {
+    public static void takeCoins(String playerName, long amount) throws InvalidCropCoinValueException {
         if (amount < 0) {
             throw new InvalidCropCoinValueException("Amount cannot be negative", null);
         }
-        plugin.getCropCoinData().addCoins(playerName, -amount);
+        CropCoins.getInstance().getCropCoinData().addCoins(playerName, -amount);
     }
 
-    public void setCoins(String playerName, long amount) throws InvalidCropCoinValueException {
+    public static void setCoins(String playerName, long amount) throws InvalidCropCoinValueException {
         if (amount < 0) {
             throw new InvalidCropCoinValueException("Amount cannot be negative", null);
         }
-        plugin.getCropCoinData().setCoins(playerName, amount);
+        CropCoins.getInstance().getCropCoinData().setCoins(playerName, amount);
     }
 
-    public int getCoins(String playerName) {
-        // Get player's coins
-        return 0;
+    public static long getCoins(String playerName) {
+        return CropCoins.getInstance().getCropCoinData().getCoins(playerName);
     }
 }

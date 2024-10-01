@@ -49,6 +49,7 @@ public final class CropCoins extends JavaPlugin {
         loadCommands();
         loadListeners();
         registerPapi();
+
     }
 
 
@@ -70,6 +71,16 @@ public final class CropCoins extends JavaPlugin {
         } else {
             Logger.getLogger().warn("PlaceholderAPI not found! Disabling PAPI Hook");
         }
+    }
+
+    private void checkForUpdates() {
+        new UpdateChecker("119769", this).hasUpdate(result -> {
+            if (result) {
+                Logger.getLogger().info("An update is available! Download it at: https://www.spigotmc.org/resources/%E2%9C%A8cropcoins-%E2%9C%A8-get-coins-by-harvesting-1-18-1-21.119769/");
+            } else {
+                Logger.getLogger().info("You are running the latest version of CropCoins!");
+            }
+        });
     }
 
     private void loadConfig() {
@@ -131,6 +142,14 @@ public final class CropCoins extends JavaPlugin {
         for (Player player : Bukkit.getOnlinePlayers()) {
             this.getCropCoinData().checkPlayer(player.getName());
         }
+    }
+
+    public static CropCoins getInstance() {
+        return getPlugin(CropCoins.class);
+    }
+
+    public static CropCoinsAPI getAPI() {
+        return getInstance().cropCoinsAPI;
     }
 
     public Database getDatabase() {
